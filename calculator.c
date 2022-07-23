@@ -1,0 +1,43 @@
+#include <stdio.h>  
+int main(){    
+    char oper;  
+    int n1,n2;   
+    float res;  
+	printf(" Choose an operator(+, -, *, /)\n ");  
+    scanf (" %c",&oper);
+	printf ("Enter the first number: ");  
+    scanf(" %d", &n1); 
+    printf (" Enter the second number: ");  
+    scanf (" %d", &n2);
+	
+    if (oper == '+') {  
+        res = n1 + n2;
+        printf (" Addition of %d and %d is: %f", n1, n2, res);  
+    }  
+    else if (oper == '-')  
+    {  
+        res = n1 - n2;  
+        printf (" Subtraction of %d and %d is: %f", n1, n2, res);  
+    }  
+      
+    else if (oper == '*')  
+    {  
+        res = n1 * n2; 
+        printf (" Multiplication of %d and %d is: %f", n1, n2, res);  
+    }  
+      
+    else if (oper == '/')  
+    {  
+        if (n2 == 0) 
+        {  
+            printf (" \n can not divide by 0. Please enter another number ");  
+            scanf ("%d", &n2);        
+        }  
+        res = n1 / n2;  
+        printf (" Division of %d and %d is: %.2f", n1, n2, res);  
+    }  
+    else  
+    {  
+        printf(" \n You have entered wrong inputs ");  
+    }  
+}
